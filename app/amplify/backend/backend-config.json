@@ -17,34 +17,5 @@
       "service": "AppSync"
     }
   },
-  "auth": {
-    "app1ae7e1f7": {
-      "customAuth": false,
-      "dependsOn": [],
-      "frontendAuthConfig": {
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyCharacters": [],
-          "passwordPolicyMinLength": 8
-        },
-        "signupAttributes": [
-          "EMAIL",
-          "NAME",
-          "PHONE_NUMBER"
-        ],
-        "socialProviders": [],
-        "usernameAttributes": [
-          "PHONE_NUMBER"
-        ],
-        "verificationMechanisms": [
-          "EMAIL"
-        ]
-      },
-      "providerPlugin": "awscloudformation",
-      "service": "Cognito"
-    }
-  }
+  "auth": {}
 }
