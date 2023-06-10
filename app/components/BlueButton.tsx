@@ -15,7 +15,7 @@ export default BlueButton
 const styles = StyleSheet.create({
     mainButton:{
         width: '100%',
-        height: '5%',
+        height: '5.8%',
         backgroundColor: colors.one,
         borderRadius: 25,
         alignItems: 'center',
