@@ -19,7 +19,7 @@ export default WhiteButton;
 const styles = StyleSheet.create({
     mainButton:{
         width: '100%',
-        height: '5.8%',
+        height: 54,
         backgroundColor: colors.four,
         borderRadius: 25,
         alignItems: 'center',
