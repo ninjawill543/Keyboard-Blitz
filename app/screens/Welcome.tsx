@@ -3,9 +3,20 @@ import React from 'react'
 import colors from '../colors'
 import BlueButton from '../components/BlueButton'
 import WhiteButton from '../components/WhiteButton'
+import {
+  useFonts,
+  Roboto_400Regular as Regular,
+  Roboto_500Medium as Medium,
+  Roboto_700Bold as Bold,
+} from '@expo-google-fonts/roboto';
 
 const Welcome = () => {
   return (
+    useFonts({
+      Regular,
+      Medium,
+      Bold
+    }),
     <View style={styles.container}>
         <View style={styles.main}>
             <View>
