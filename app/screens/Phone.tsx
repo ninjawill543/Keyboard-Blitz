@@ -2,6 +2,24 @@ import React, { useEffect, useRef } from 'react';
 import { StyleSheet, Text, View, KeyboardAvoidingView, Platform, TextInput, TouchableOpacity, Image } from 'react-native';
 import BlueButton from '../components/BlueButton';
 import colors from '../colors'
+import AppLoading from 'expo-app-loading';
+
+import {
+  useFonts,
+  Roboto_100Thin,
+  Roboto_100Thin_Italic,
+  Roboto_300Light,
+  Roboto_300Light_Italic,
+  Roboto_400Regular,
+  Roboto_400Regular_Italic,
+  Roboto_500Medium,
+  Roboto_500Medium_Italic,
+  Roboto_700Bold,
+  Roboto_700Bold_Italic,
+  Roboto_900Black,
+  Roboto_900Black_Italic,
+} from '@expo-google-fonts/roboto';
+
 
 
 const Phone = () => {
@@ -12,10 +30,26 @@ const Phone = () => {
   }, []);
 
   return (
+    useFonts({
+      Roboto_100Thin,
+      Roboto_100Thin_Italic,
+      Roboto_300Light,
+      Roboto_300Light_Italic,
+      Roboto_400Regular,
+      Roboto_400Regular_Italic,
+      Roboto_500Medium,
+      Roboto_500Medium_Italic,
+      Roboto_700Bold,
+      Roboto_700Bold_Italic,
+      Roboto_900Black,
+      Roboto_900Black_Italic,
+    }), 
+    
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={styles.container}
     >
+      
       <View style={styles.main}>
         <View style={styles.top}>
           <Text style={styles.title}>Enter your phone number </Text>
@@ -71,26 +105,25 @@ const styles = StyleSheet.create({
   textInput: {
     height: 37,
     fontSize: 18,
-    fontFamily: 'Al Nile',
+    fontFamily: 'Roboto_400Regular',
   },
   littleText:{
     fontSize: 16,
-    fontFamily: 'Al Nile',
+    fontFamily: 'Roboto_400Regular',
     textAlign: 'left',
     marginBottom: '7.36%'
     
   },
   phoneText:{
-    fontSize: 12,
-    fontFamily: 'AlNile',
-    fontWeight: '500',
+    fontSize: 14,
+    fontFamily: 'Roboto_500Medium',
     textAlign: 'left',
     marginBottom: '7.36%'
     
   },
   title:{
     fontSize: 28,
-    fontFamily: 'AlNile-Bold',
+    fontFamily: 'Roboto_700Bold',
     textAlign: 'left',
     marginBottom: '6%',
   },
