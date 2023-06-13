@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
     },
     buttonText:{
         color: colors.four,
-        fontFamily: 'AlNile-Bold',
-        fontSize: 15
+        fontFamily: 'Bold',
+        fontSize: 17
     
     }
 })

@@ -2,25 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import { StyleSheet, Text, View, KeyboardAvoidingView, Platform, TextInput, TouchableOpacity, Image } from 'react-native';
 import BlueButton from '../components/BlueButton';
 import colors from '../colors'
-import AppLoading from 'expo-app-loading';
-
 import {
   useFonts,
-  Roboto_100Thin,
-  Roboto_100Thin_Italic,
-  Roboto_300Light,
-  Roboto_300Light_Italic,
-  Roboto_400Regular,
-  Roboto_400Regular_Italic,
-  Roboto_500Medium,
-  Roboto_500Medium_Italic,
-  Roboto_700Bold,
-  Roboto_700Bold_Italic,
-  Roboto_900Black,
-  Roboto_900Black_Italic,
+  Roboto_400Regular as Regular,
+  Roboto_500Medium as Medium,
+  Roboto_700Bold as Bold,
 } from '@expo-google-fonts/roboto';
-
-
 
 const Phone = () => {
   const textInputRef = useRef(null);
@@ -31,25 +18,14 @@ const Phone = () => {
 
   return (
     useFonts({
-      Roboto_100Thin,
-      Roboto_100Thin_Italic,
-      Roboto_300Light,
-      Roboto_300Light_Italic,
-      Roboto_400Regular,
-      Roboto_400Regular_Italic,
-      Roboto_500Medium,
-      Roboto_500Medium_Italic,
-      Roboto_700Bold,
-      Roboto_700Bold_Italic,
-      Roboto_900Black,
-      Roboto_900Black_Italic,
+      Regular,
+      Medium,
+      Bold
     }), 
-    
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={styles.container}
     >
-      
       <View style={styles.main}>
         <View style={styles.top}>
           <Text style={styles.title}>Enter your phone number </Text>
@@ -105,25 +81,26 @@ const styles = StyleSheet.create({
   textInput: {
     height: 37,
     fontSize: 18,
-    fontFamily: 'Roboto_400Regular',
+    fontFamily: 'Regular',
   },
   littleText:{
     fontSize: 16,
-    fontFamily: 'Roboto_400Regular',
+    fontFamily: 'Regular',
     textAlign: 'left',
     marginBottom: '7.36%'
     
   },
   phoneText:{
     fontSize: 14,
-    fontFamily: 'Roboto_500Medium',
+    fontFamily: 'Medium',
+    fontWeight: '500',
     textAlign: 'left',
     marginBottom: '7.36%'
     
   },
   title:{
-    fontSize: 28,
-    fontFamily: 'Roboto_700Bold',
+    fontSize: 30,
+    fontFamily: 'Bold',
     textAlign: 'left',
     marginBottom: '6%',
   },
@@ -141,8 +118,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   countryText:{
-    fontSize: 28,
-    fontFamily: 'Al Nile',
+    fontSize: 22,
+    fontFamily: 'Regular',
     textAlign: 'center',
     marginTop: 4
   },

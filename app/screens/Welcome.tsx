@@ -43,14 +43,14 @@ const styles = StyleSheet.create({
     },
     littleText:{
       fontSize: 18,
-      fontFamily: 'Al Nile',
+      fontFamily: 'Regular',
       textAlign: 'center',
       marginBottom: '7.36%'
       
     },
     title:{
-      fontSize: 30,
-      fontFamily: 'AlNile-Bold',
+      fontSize: 32,
+      fontFamily: 'Bold',
       textAlign: 'center',
       marginBottom: '7.8%'
     },
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     },
     languageText:{
       fontSize: 18,
-      fontFamily: 'Al Nile',
+      fontFamily: 'Regular',
       textAlign: 'center',
     },
     languageSign:{

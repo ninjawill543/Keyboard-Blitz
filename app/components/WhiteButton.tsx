@@ -29,8 +29,8 @@ const styles = StyleSheet.create({
     },
     buttonText:{
         color: colors.one,
-        fontFamily: 'AlNile-Bold',
-        fontSize: 15
+        fontFamily: 'Bold',
+        fontSize: 17
     
     }
 })
