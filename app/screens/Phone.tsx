@@ -32,6 +32,7 @@ const Phone = () => {
                 style={styles.textInput}
                 keyboardType="phone-pad"
                 placeholder='Phone Number'
+                placeholderTextColor='#C2D4F2'
               />
               <View style={styles.underline} />
             </View>
@@ -69,6 +70,8 @@ const styles = StyleSheet.create({
   },
   textInput: {
     height: 37,
+    fontSize: 18,
+    fontFamily: 'Al Nile',
   },
   littleText:{
     fontSize: 16,
