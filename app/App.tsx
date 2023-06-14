@@ -3,10 +3,12 @@ import { StyleSheet, Text, View } from 'react-native';
 import Phone from './screens/Phone';
 import Welcome from './screens/Welcome';
 import Code from './screens/Code';
+import Name from './screens/Name';
+import Friends from './screens/Friends';
 
 export default function App() {
   return (
-    <Code />
+    <Friends />
   );
 }
 
