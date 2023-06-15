@@ -5,10 +5,11 @@ import Welcome from './screens/Welcome';
 import Code from './screens/Code';
 import Name from './screens/Name';
 import Friends from './screens/Friends';
+import FriendSearch from './screens/FriendSearch';
 
 export default function App() {
   return (
-    <Friends />
+    <FriendSearch />
   );
 }
 
