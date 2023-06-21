@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { StyleSheet, Text, View, KeyboardAvoidingView, Platform, Image, ImageBackground } from 'react-native';
 import ColoredPlaceholderTextInput from '../components/ColoredText';
-import BlueButton from '../components/BlueButton';
-import colors from '../colors';
 import AppLoading from 'expo-app-loading';
 import {
   useFonts,
@@ -81,7 +79,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   inputContainer: {
-    marginBottom: 36,
+    marginBottom: 0,
   },
   scoreContainer: {
     flexDirection: 'row',
