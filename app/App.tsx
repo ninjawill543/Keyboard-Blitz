@@ -7,7 +7,6 @@ import Name from './screens/Name';
 import Friends from './screens/Friends';
 import FriendSearch from './screens/FriendSearch';
 import Game from './screens/Game';
-import AppLoading from 'expo-app-loading'
 
 export default function App() {
   return (

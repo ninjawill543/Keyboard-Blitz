@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { StyleSheet, Text, View, KeyboardAvoidingView, Platform, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import BlueButton from '../components/BlueButton';
 import colors from '../colors'
@@ -16,9 +16,13 @@ const Game = () => {
   const textInputRef = useRef(null);
 
   useEffect(() => {
-    textInputRef.current.focus();
+    if (textInputRef.current) {
+      textInputRef.current.focus();
+    }
   }, []);
   
+  const [text, setText] = useState('');
+
   let [fontsLoaded] = useFonts({
     Regular,
     Medium,
@@ -55,9 +59,11 @@ const Game = () => {
                 placeholderTextColor='#000000'
                 underlineColorAndroid="transparent"
                 blurOnSubmit={false} 
-                autoCorrect={false} 
                 autoCapitalize="none" 
                 returnKeyType="next" 
+                value={text}
+                onChangeText={setText}
+                autoCorrect={false}
                 
               />
           </View>
@@ -69,7 +75,7 @@ const Game = () => {
   return (
     <AppLoading />  //AppLoading will only be dispalyed while fonts loaded is false
 
-
+    
   );
 };
 
