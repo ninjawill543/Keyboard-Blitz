@@ -7,6 +7,7 @@ import Name from './screens/Name';
 import Friends from './screens/Friends';
 import FriendSearch from './screens/FriendSearch';
 import Game from './screens/Game';
+import Email from './screens/Email';
 
 export default function App() {
   return (
