@@ -6,10 +6,11 @@ import Code from './screens/Code';
 import Name from './screens/Name';
 import Friends from './screens/Friends';
 import FriendSearch from './screens/FriendSearch';
+import Game from './screens/Game';
 
 export default function App() {
   return (
-    <FriendSearch />
+    <Game />
   );
 }
 

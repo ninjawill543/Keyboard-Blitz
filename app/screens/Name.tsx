@@ -36,7 +36,7 @@ const Code = () => {
               <TextInput
                 ref={textInputRef}
                 style={styles.textInput}
-                keyboardType="phone-pad"
+
                 placeholderTextColor='#C2D4F2'
               />
               <View style={styles.underline} />
