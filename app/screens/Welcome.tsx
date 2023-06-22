@@ -1,8 +1,9 @@
 import { StyleSheet, Text, View, Button, TouchableOpacity, Image } from 'react-native'
-import React from 'react'
+import React, {useState} from 'react'
 import colors from '../colors'
 import BlueButton from '../components/BlueButton'
 import WhiteButton from '../components/WhiteButton'
+
 import {
   useFonts,
   Roboto_400Regular as Regular,
@@ -11,6 +12,15 @@ import {
 } from '@expo-google-fonts/roboto';
 
 const Welcome = () => {
+
+  const [isButton1Visible, setButton1Visible] = useState(true);
+  const [isButton2Visible, setButton2Visible] = useState(false);
+
+  const toggleButtons = () => {
+    setButton1Visible(!isButton1Visible);
+    setButton2Visible(!isButton2Visible);
+  };
+  
   return (
     useFonts({
       Regular,
@@ -20,10 +30,19 @@ const Welcome = () => {
     <View style={styles.container}>
         <View style={styles.main}>
             <View>
-              <TouchableOpacity style={styles.language}>
-                <Image source={require('../assets/language.png')} style={styles.languageSign}/>  
-                <Text style={styles.languageText}>English</Text>
-              </TouchableOpacity>
+            {isButton1Visible && (
+        <TouchableOpacity style={styles.language} onPress={toggleButtons}>
+        <Image source={require('../assets/language.png')} style={styles.languageSign}/>  
+        <Text style={styles.languageText}>English</Text>
+      </TouchableOpacity>
+      )}
+      {isButton2Visible && (
+        <TouchableOpacity style={styles.language} onPress={toggleButtons}>
+        <Image source={require('../assets/language.png')} style={styles.languageSign}/>  
+        <Text style={styles.languageText}>French</Text>
+      </TouchableOpacity>
+      )}
+              
             </View>
             <Image source={require('../assets/home.png')} style={styles.image}/>           
             <Text style={styles.title}>Welcome to Racer </Text>
@@ -32,6 +51,7 @@ const Welcome = () => {
             <WhiteButton buttonText={"I'm new, sign me up"} bottomPadding={'26%'}/>
         </View>
     </View>
+
   )
 }
 
@@ -82,7 +102,8 @@ const styles = StyleSheet.create({
       marginLeft: '66%',
       width: 131,
       height: 41,
-      flexDirection: 'row'
+      flexDirection: 'row',
+
     },
     languageText:{
       fontSize: 18,
