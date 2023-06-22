@@ -11,7 +11,7 @@ import Email from './screens/Email';
 
 export default function App() {
   return (
-    <Welcome />
+    <Email />
   );
 }
 
