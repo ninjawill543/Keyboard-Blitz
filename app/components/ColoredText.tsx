@@ -57,7 +57,7 @@ const ColoredPlaceholderTextInput = () => {
 const styles = StyleSheet.create({
   container: {
     margin: 10,
-    marginTop: 50
+    marginTop: 28
   },
   placeholderContainer: {
     flexDirection: 'row',

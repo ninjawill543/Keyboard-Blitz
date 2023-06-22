@@ -11,7 +11,7 @@ import {
 
 const Game = () => {
   const left = 250;
-  const right = -70;
+  const right = -60;
   const textInputRef = useRef(null);
 
   const [text, setText] = useState('');
@@ -35,8 +35,14 @@ const Game = () => {
         style={styles.container}
       >
         <View style={styles.main}>
+            {/* <View style={{flexDirection: 'row'}}>
+              <Text style={styles.nameText}>bob123</Text>
+              <Text style={styles.nameText}>me</Text>
+            </View> */}
           <View style={styles.scoreContainer}>
-            <View style={{ marginHorizontal: 60, flexDirection: 'column', alignItems: 'center' }}>
+
+            <View style={{ marginHorizontal: 60, flexDirection: 'column', alignItems: 'center'}}>
+              {/* <Text style={styles.nameText}>bob12ddd3</Text> */}
               <ImageBackground
                 source={require('../assets/track.png')}
                 style={{ width: 46, height: 330, alignItems: 'center', justifyContent: 'flex-start' }}
@@ -45,6 +51,7 @@ const Game = () => {
               </ImageBackground>
             </View>
             <View style={{ marginHorizontal: 60, flexDirection: 'column', alignItems: 'center' }}>
+              {/* <Text style={styles.nameText}>me</Text> */}
               <ImageBackground
                 source={require('../assets/track.png')}
                 style={{ width: 46, height: 330, alignItems: 'center', justifyContent: 'flex-start' }}
@@ -85,5 +92,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     justifyContent: 'center',
+    // backgroundColor: 'green'
   },
+  nameText:{
+    fontSize: 30, 
+    marginBottom: 5, 
+    marginHorizontal: 20,
+    // color: 'white'
+  }
 });
