@@ -2,14 +2,20 @@ import React, { useEffect, useRef } from 'react';
 import { StyleSheet, Text, View, KeyboardAvoidingView, Platform, TextInput, TouchableOpacity, Image } from 'react-native';
 import BlueButton from '../components/BlueButton';
 import colors from '../colors'
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from './RootStackParams';
 import {
   useFonts,
   Roboto_400Regular as Regular,
   Roboto_500Medium as Medium,
   Roboto_700Bold as Bold,
 } from '@expo-google-fonts/roboto';
+type NameScreenProp = StackNavigationProp<RootStackParamList, 'Name'>;
+
 
 const Code = () => {
+  const navigation = useNavigation<NameScreenProp>();
   const textInputRef = useRef(null);
 
   useEffect(() => {
@@ -44,7 +50,7 @@ const Code = () => {
           </View>
         </View>
         <View style={styles.bottom}>
-          <BlueButton buttonText={'Continue'} bottomPadding={36}/>
+          <BlueButton buttonText={'Continue'} bottomPadding={36} onPress={() => navigation.navigate('Friends')}/>
         </View>
       </View>
     </KeyboardAvoidingView>

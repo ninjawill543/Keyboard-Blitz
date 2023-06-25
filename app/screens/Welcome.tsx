@@ -3,6 +3,11 @@ import React, {useState} from 'react'
 import colors from '../colors'
 import BlueButton from '../components/BlueButton'
 import WhiteButton from '../components/WhiteButton'
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from './RootStackParams';
+
+type WelcomeScreenProp = StackNavigationProp<RootStackParamList, 'Welcome'>;
 
 import {
   useFonts,
@@ -12,6 +17,7 @@ import {
 } from '@expo-google-fonts/roboto';
 
 const Welcome = () => {
+  const navigation = useNavigation<WelcomeScreenProp>();
 
   const [isButton1Visible, setButton1Visible] = useState(true);
   const [isButton2Visible, setButton2Visible] = useState(false);
@@ -47,8 +53,8 @@ const Welcome = () => {
             <Image source={require('../assets/home.png')} style={styles.image}/>           
             <Text style={styles.title}>Welcome to Racer </Text>
             <Text style={styles.littleText}>The competitive typing game where you compete against your friends</Text>
-            <BlueButton buttonText={'Log In'} bottomPadding={'6.67%'}/>
-            <WhiteButton buttonText={"I'm new, sign me up"} bottomPadding={'26%'}/>
+            <BlueButton buttonText={'Log In'} bottomPadding={'6.67%'} onPress={() => navigation.navigate('LogPhone')}/>
+            <WhiteButton buttonText={"I'm new, sign me up"} bottomPadding={'26%'} onPress={() => navigation.navigate('Phone')}/>
         </View>
     </View>
 

@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { StyleSheet, Text, View, KeyboardAvoidingView, Platform, TextInput, TouchableOpacity, Image } from 'react-native';
 import BlueButton from '../components/BlueButton';
 import colors from '../colors'
+import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from './RootStackParams';
-import {useNavigation} from '@react-navigation/native';
 import {
   useFonts,
   Roboto_400Regular as Regular,
@@ -12,10 +12,11 @@ import {
   Roboto_700Bold as Bold,
 } from '@expo-google-fonts/roboto';
 
-type PhoneScreenProp = StackNavigationProp<RootStackParamList, 'Phone'>;
+type LogCodeScreenProp = StackNavigationProp<RootStackParamList, 'LogCode'>;
 
-const Phone = () => {
-  const navigation = useNavigation<PhoneScreenProp>();
+
+const LogCode = () => {
+  const navigation = useNavigation<LogCodeScreenProp>();
   const textInputRef = useRef(null);
 
   useEffect(() => {
@@ -34,20 +35,16 @@ const Phone = () => {
     >
       <View style={styles.main}>
         <View style={styles.top}>
-          <Text style={styles.title}>Enter your phone number </Text>
-          <Text style={styles.littleText}>You can login or make an account if you are new to Racer</Text>
-          <Text style={styles.phoneText}>Phone Number *</Text>
+          <Text style={styles.title}>Enter OTP Code </Text>
+          <Text style={styles.littleText}>Enter the OTP code we sent via SMS to your registered phone number +330769232441</Text>
+          <Text style={styles.phoneText}>OTP *</Text>
           <View style={styles.inputContainer}>
-            <TouchableOpacity style={styles.country}>
-              <Image source={require('../assets/france.png')} style={styles.flag}/>  
-              <Text style={styles.countryText}>+33</Text>
-            </TouchableOpacity>
             <View style={styles.lineContainer}>
               <TextInput
                 ref={textInputRef}
                 style={styles.textInput}
                 keyboardType="phone-pad"
-                placeholder='Phone Number'
+                placeholder='Code'
                 placeholderTextColor='#C2D4F2'
               />
               <View style={styles.underline} />
@@ -55,14 +52,14 @@ const Phone = () => {
           </View>
         </View>
         <View style={styles.bottom}>
-          <BlueButton buttonText={'Continue'} bottomPadding={36} onPress={() => navigation.navigate('Code')}/>
+          <BlueButton buttonText={'Continue'} bottomPadding={36} onPress={() => navigation.navigate('Friends')}/>
         </View>
       </View>
     </KeyboardAvoidingView>
   );
 };
 
-export default Phone;
+export default LogCode;
 
 const styles = StyleSheet.create({
   container: {
@@ -79,7 +76,7 @@ const styles = StyleSheet.create({
   },
   top:{
     marginTop: '25%',
-    width: '90%'
+    width: '100%'
   },
   bottom:{
     
@@ -93,7 +90,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: 'Regular',
     textAlign: 'left',
-    marginBottom: '7.36%'
+    marginBottom: '7.36%',
     
   },
   phoneText:{
@@ -136,16 +133,16 @@ const styles = StyleSheet.create({
   },
   inputContainer:{
     flexDirection: 'row',
-    width: '90%'
+    width: '100%'
   },
   underline: {
     height: 1,
     backgroundColor: 'black',
-    width: '90%'
+    width: '100%'
   },
   lineContainer:{
     flexDirection: 'column', 
-    width: '90%', 
-    marginLeft: 25
+    width: '100%', 
+    // marginLeft: 
   }
 });

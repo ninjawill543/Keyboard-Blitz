@@ -1,5 +1,8 @@
 import { StyleSheet, Text, View, SafeAreaView, Image, TextInput, TouchableOpacity, FlatList, Keyboard } from 'react-native'
 import React from 'react'
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from './RootStackParams';
 import {
   useFonts,
   Roboto_400Regular as Regular,
@@ -7,7 +10,11 @@ import {
   Roboto_700Bold as Bold,
 } from '@expo-google-fonts/roboto';
 
+type FriendSearchScreenProp = StackNavigationProp<RootStackParamList, 'FriendSearch'>;
+
+
 const Email = () => {
+  const navigation = useNavigation<FriendSearchScreenProp>();
 
   const data = [
     { id: '1', name: 'Alice', points: '500 pts', image: require('../assets/person1.png') },

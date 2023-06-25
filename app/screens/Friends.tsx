@@ -1,5 +1,8 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react-native'
 import React from 'react'
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from './RootStackParams';
 import {
   useFonts,
   Roboto_400Regular as Regular,
@@ -7,7 +10,11 @@ import {
   Roboto_700Bold as Bold,
 } from '@expo-google-fonts/roboto';
 
+type FriendsScreenProp = StackNavigationProp<RootStackParamList, 'Friends'>;
+
+
 const Friends = () => {
+  const navigation = useNavigation<FriendsScreenProp>();
   const data = [
     { id: '1', name: 'Helen', points: '1058 pts', image: require('../assets/person1.png') },
     { id: '2', name: 'Helen', points: '1058 pts', image: require('../assets/person2.png') },
@@ -33,7 +40,7 @@ const Friends = () => {
 
   const renderCard = ({ item }) => {
     return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Game')}>
         <View style={styles.card}>
           <Image source={item.image} style={styles.cardImage} />
           <Text style={styles.cardText}>{item.name}</Text>
@@ -56,7 +63,7 @@ const Friends = () => {
             <Image source={require('../assets/lh.png')} style={{width: 64, height: 64}} /> 
           </TouchableOpacity>
           <Text style={styles.title}>Friends</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('FriendSearch')}>
             <Image source={require('../assets/plus.png')} style={{width: 28, height: 28, marginLeft: 36}} /> 
           </TouchableOpacity>
         </View>

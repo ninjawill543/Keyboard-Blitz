@@ -12,10 +12,10 @@ import {
   Roboto_700Bold as Bold,
 } from '@expo-google-fonts/roboto';
 
-type PhoneScreenProp = StackNavigationProp<RootStackParamList, 'Phone'>;
+type LogPhoneScreenProp = StackNavigationProp<RootStackParamList, 'LogPhone'>;
 
-const Phone = () => {
-  const navigation = useNavigation<PhoneScreenProp>();
+const LogPhone = () => {
+  const navigation = useNavigation<LogPhoneScreenProp>();
   const textInputRef = useRef(null);
 
   useEffect(() => {
@@ -55,14 +55,14 @@ const Phone = () => {
           </View>
         </View>
         <View style={styles.bottom}>
-          <BlueButton buttonText={'Continue'} bottomPadding={36} onPress={() => navigation.navigate('Code')}/>
+          <BlueButton buttonText={'Continue'} bottomPadding={36} onPress={() => navigation.navigate('LogCode')}/>
         </View>
       </View>
     </KeyboardAvoidingView>
   );
 };
 
-export default Phone;
+export default LogPhone;
 
 const styles = StyleSheet.create({
   container: {

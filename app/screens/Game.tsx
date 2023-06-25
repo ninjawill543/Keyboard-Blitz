@@ -2,14 +2,20 @@ import React, { useEffect, useRef, useState } from 'react';
 import { StyleSheet, Text, View, KeyboardAvoidingView, Platform, Image, ImageBackground } from 'react-native';
 import ColoredPlaceholderTextInput from '../components/ColoredText';
 import AppLoading from 'expo-app-loading';
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from './RootStackParams';
 import {
   useFonts,
   Roboto_400Regular as Regular,
   Roboto_500Medium as Medium,
   Roboto_700Bold as Bold,
 } from '@expo-google-fonts/roboto';
+type GameScreenProp = StackNavigationProp<RootStackParamList, 'Game'>;
+
 
 const Game = () => {
+  const navigation = useNavigation<GameScreenProp>();
   const left = 250;
   const right = -60;
   const textInputRef = useRef(null);
