@@ -12,7 +12,6 @@ import BlueButton from "../components/BlueButton";
 import WhiteButton from "../components/WhiteButton";
 import "../locales/index";
 import { useTranslation } from "react-i18next";
-import DropDownPicker from "react-native-dropdown-picker";
 
 import {
   useFonts,

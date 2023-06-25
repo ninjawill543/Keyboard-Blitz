@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
 import Phone from './screens/Phone';
 import Welcome from './screens/Welcome';
 import Code from './screens/Code';
@@ -11,7 +12,7 @@ import Email from './screens/Email';
 
 export default function App() {
   return (
-    <Email />
+    <Welcome />
   );
 }
 
