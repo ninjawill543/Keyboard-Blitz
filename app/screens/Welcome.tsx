@@ -30,22 +30,17 @@ const Welcome = () => {
   const navigation = useNavigation<WelcomeScreenProp>();
 
   const { t, i18n } = useTranslation(); // destructure i18n here
-  const [open, setOpen] = useState(false);
-  const [value, setValue] = useState("en");
-  const [items, setItems] = useState([
-    { label: "English", value: "en" },
-    { label: "French", value: "fr" },
-  ]);
-
-  useEffect(() => {
-    i18n.changeLanguage(value);
-  }, [value]);
 
   const [isButton1Visible, setButton1Visible] = useState(true);
   const [isButton2Visible, setButton2Visible] = useState(false);
 
   const toggleButtons = () => {
-    setButton1Visible(!isButton1Visible);
+    setButton1Visible(!isButton1Visible) ;
+    if (isButton1Visible){
+      i18n.changeLanguage('fr');
+    }else{
+      i18n.changeLanguage('en');
+    }
     setButton2Visible(!isButton2Visible);
   };
 
@@ -79,13 +74,13 @@ const Welcome = () => {
             )}
           </View>
           <Image source={require("../assets/home.png")} style={styles.image} />
-          <Text style={styles.title}>{t("dummyNamespace.medium")}</Text>
+          <Text style={styles.title}>{t("Welcome.title")}</Text>
           <Text style={styles.littleText}>
-            The competitive typing game where you compete against your friends
+          {t("Welcome.desc")}
           </Text>
-          <BlueButton buttonText={"Log In"} bottomPadding={"6.67%"} onPress={() => navigation.navigate('LogPhone')}/>
+          <BlueButton buttonText={t("Welcome.log")} bottomPadding={"6.67%"} onPress={() => navigation.navigate('LogPhone')}/>
           <WhiteButton
-            buttonText={"I'm new, sign me up"}
+            buttonText={t("Welcome.sign")}
             bottomPadding={"26%"}
             onPress={() => navigation.navigate('Phone')}
           />

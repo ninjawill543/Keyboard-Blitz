@@ -1,5 +1,33 @@
 {
-    "dummyNamespace": {
-      "medium": "Bienvenu"
-    }
-  }
+  "Welcome": {
+    "title": "Bienvenue à Keyboard Blitz",
+    "desc": "Le jeu compétitif où vous vous battez avec vos amis",
+    "log": "Connexion",
+    "sign": "Créer un compte"
+  },
+  "Phone": {
+    "title": "Entrez votre numéro de téléphone",
+    "desc": "Vous pouvez vous connecter ou créer un compte si vous êtes nouveau sur Keyboard Blitz",
+    "num": "Numéro de téléphone"
+  },
+  "Code": {
+    "title": "Enter OTP Code",
+    "desc": "Veuillez renseigner le code que nous venons de vous envoyer au +33769232441"
+  },
+  "Name": {
+    "title": "Choisir un pseudo",
+    "user": "Pseudo"
+  },
+  "Friends": {
+    "friends": "Amis"
+  },
+  "FriendSearch": {
+    "search": "Rechercher",
+    "cancel": "Annuler"
+  },
+  "Game": {
+    "medium": "Welcome"
+  },
+  "Continue": "Prochain"
+
+}

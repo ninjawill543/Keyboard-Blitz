@@ -11,11 +11,14 @@ import {
   Roboto_500Medium as Medium,
   Roboto_700Bold as Bold,
 } from '@expo-google-fonts/roboto';
+import "../locales/index";
+import { useTranslation } from "react-i18next";
 
 type LogCodeScreenProp = StackNavigationProp<RootStackParamList, 'LogCode'>;
 
 
 const LogCode = () => {
+  const { t, i18n } = useTranslation();
   const navigation = useNavigation<LogCodeScreenProp>();
   const textInputRef = useRef(null);
 

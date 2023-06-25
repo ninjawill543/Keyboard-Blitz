@@ -11,10 +11,13 @@ import {
   Roboto_500Medium as Medium,
   Roboto_700Bold as Bold,
 } from '@expo-google-fonts/roboto';
+import "../locales/index";
+import { useTranslation } from "react-i18next";
 type GameScreenProp = StackNavigationProp<RootStackParamList, 'Game'>;
 
 
 const Game = () => {
+  const { t, i18n } = useTranslation();
   const navigation = useNavigation<GameScreenProp>();
   const left = 250;
   const right = -60;

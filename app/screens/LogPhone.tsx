@@ -11,10 +11,13 @@ import {
   Roboto_500Medium as Medium,
   Roboto_700Bold as Bold,
 } from '@expo-google-fonts/roboto';
+import "../locales/index";
+import { useTranslation } from "react-i18next";
 
 type LogPhoneScreenProp = StackNavigationProp<RootStackParamList, 'LogPhone'>;
 
 const LogPhone = () => {
+  const { t, i18n } = useTranslation(); // destructure i18n here
   const navigation = useNavigation<LogPhoneScreenProp>();
   const textInputRef = useRef(null);
 
@@ -34,7 +37,8 @@ const LogPhone = () => {
     >
       <View style={styles.main}>
         <View style={styles.top}>
-          <Text style={styles.title}>Enter your phone number </Text>
+          {/* <Text style={styles.title}>Enter your phone number </Text> */}
+          <Text style={styles.title}>{t("dummyNamespace.medium")} </Text>
           <Text style={styles.littleText}>You can login or make an account if you are new to Racer</Text>
           <Text style={styles.phoneText}>Phone Number *</Text>
           <View style={styles.inputContainer}>

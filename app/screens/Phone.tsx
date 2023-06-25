@@ -5,6 +5,8 @@ import colors from '../colors'
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from './RootStackParams';
 import {useNavigation} from '@react-navigation/native';
+import "../locales/index";
+import { useTranslation } from "react-i18next";
 import {
   useFonts,
   Roboto_400Regular as Regular,
@@ -15,6 +17,7 @@ import {
 type PhoneScreenProp = StackNavigationProp<RootStackParamList, 'Phone'>;
 
 const Phone = () => {
+  const { t, i18n } = useTranslation();
   const navigation = useNavigation<PhoneScreenProp>();
   const textInputRef = useRef(null);
 
@@ -34,9 +37,9 @@ const Phone = () => {
     >
       <View style={styles.main}>
         <View style={styles.top}>
-          <Text style={styles.title}>Enter your phone number </Text>
-          <Text style={styles.littleText}>You can login or make an account if you are new to Racer</Text>
-          <Text style={styles.phoneText}>Phone Number *</Text>
+          <Text style={styles.title}>{t("Phone.title")}</Text>
+          <Text style={styles.littleText}>{t("Phone.desc")}</Text>
+          <Text style={styles.phoneText}>{t("Phone.num")} *</Text>
           <View style={styles.inputContainer}>
             <TouchableOpacity style={styles.country}>
               <Image source={require('../assets/france.png')} style={styles.flag}/>  
@@ -47,7 +50,7 @@ const Phone = () => {
                 ref={textInputRef}
                 style={styles.textInput}
                 keyboardType="phone-pad"
-                placeholder='Phone Number'
+                placeholder={t("Phone.num")}
                 placeholderTextColor='#C2D4F2'
               />
               <View style={styles.underline} />
@@ -55,7 +58,7 @@ const Phone = () => {
           </View>
         </View>
         <View style={styles.bottom}>
-          <BlueButton buttonText={'Continue'} bottomPadding={36} onPress={() => navigation.navigate('Code')}/>
+          <BlueButton buttonText={t("Continue")} bottomPadding={36} onPress={() => navigation.navigate('Code')}/>
         </View>
       </View>
     </KeyboardAvoidingView>

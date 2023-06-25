@@ -11,10 +11,13 @@ import {
   Roboto_500Medium as Medium,
   Roboto_700Bold as Bold,
 } from '@expo-google-fonts/roboto';
+import "../locales/index";
+import { useTranslation } from "react-i18next";
 type NameScreenProp = StackNavigationProp<RootStackParamList, 'Name'>;
 
 
 const Code = () => {
+  const { t, i18n } = useTranslation();
   const navigation = useNavigation<NameScreenProp>();
   const textInputRef = useRef(null);
 

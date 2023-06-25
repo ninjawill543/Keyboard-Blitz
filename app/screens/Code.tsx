@@ -5,6 +5,8 @@ import colors from '../colors'
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from './RootStackParams';
+import "../locales/index";
+import { useTranslation } from "react-i18next";
 import {
   useFonts,
   Roboto_400Regular as Regular,
@@ -16,6 +18,7 @@ type CodeScreenProp = StackNavigationProp<RootStackParamList, 'Code'>;
 
 
 const Code = () => {
+  const { t, i18n } = useTranslation();
   const navigation = useNavigation<CodeScreenProp>();
   const textInputRef = useRef(null);
 

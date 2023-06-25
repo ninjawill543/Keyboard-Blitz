@@ -9,11 +9,14 @@ import {
   Roboto_500Medium as Medium,
   Roboto_700Bold as Bold,
 } from '@expo-google-fonts/roboto';
+import "../locales/index";
+import { useTranslation } from "react-i18next";
 
 type FriendsScreenProp = StackNavigationProp<RootStackParamList, 'Friends'>;
 
 
 const Friends = () => {
+  const { t, i18n } = useTranslation();
   const navigation = useNavigation<FriendsScreenProp>();
   const data = [
     { id: '1', name: 'Helen', points: '1058 pts', image: require('../assets/person1.png') },

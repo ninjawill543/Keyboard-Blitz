@@ -1,5 +1,33 @@
 {
-    "dummyNamespace": {
+    "Welcome": {
+      "title": "Welcome to Keyboard Blitz",
+      "desc": "The competitive typing game where you compete against your friends",
+      "log": "Log In",
+      "sign": "I'm new, sign me up"
+    },
+    "Phone": {
+      "title": "Enter your phone number",
+      "desc": "You can login or make an account if you are new to Keyboard Blitz",
+      "num": "Phone Number"
+    },
+    "Code": {
+      "title": "Enter OTP Code",
+      "desc": "Enter the OTP code we sent via SMS to your registered phone number +33769232441"
+    },
+    "Name": {
+      "title": "Chose a username",
+      "user": "Username"
+    },
+    "Friends": {
+      "friends": "Friends"
+    },
+    "FriendSearch": {
+      "search": "Search",
+      "cancel": "Cancel"
+    },
+    "Game": {
       "medium": "Welcome"
-    }
+    },
+    "Continue": "Continue"
+
   }
