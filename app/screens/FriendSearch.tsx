@@ -69,9 +69,9 @@ const Email = () => {
           <View style={styles.topMenu}>
             <View style={styles.input}>
               <Image source={require('../assets/search.png')} style={{width: 25, height: 25, marginLeft: 5}} />
-              <TextInput placeholder='Search' placeholderTextColor='#8E8E92' style={styles.textInput}></TextInput> 
+              <TextInput placeholder={t("FriendSearch.search")} placeholderTextColor='#8E8E92' style={styles.textInput}></TextInput> 
             </View>
-            <Text onPress={Keyboard.dismiss} style={styles.cancel}>Cancel</Text>
+            <Text onPress={Keyboard.dismiss} style={styles.cancel}>{t("FriendSearch.cancel")}</Text>
           </View>
           <View style={styles.underline} />
           {/* <View style={styles.cardContainer}>

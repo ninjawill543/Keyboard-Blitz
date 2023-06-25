@@ -11,7 +11,7 @@
     "num": "Numéro de téléphone"
   },
   "Code": {
-    "title": "Enter OTP Code",
+    "title": "Code 2FA",
     "desc": "Veuillez renseigner le code que nous venons de vous envoyer au +33769232441"
   },
   "Name": {

@@ -38,9 +38,9 @@ const LogPhone = () => {
       <View style={styles.main}>
         <View style={styles.top}>
           {/* <Text style={styles.title}>Enter your phone number </Text> */}
-          <Text style={styles.title}>{t("dummyNamespace.medium")} </Text>
-          <Text style={styles.littleText}>You can login or make an account if you are new to Racer</Text>
-          <Text style={styles.phoneText}>Phone Number *</Text>
+          <Text style={styles.title}>{t("Phone.title")} </Text>
+          <Text style={styles.littleText}>{t("Phone.desc")}</Text>
+          <Text style={styles.phoneText}>{t("Phone.num")} *</Text>
           <View style={styles.inputContainer}>
             <TouchableOpacity style={styles.country}>
               <Image source={require('../assets/france.png')} style={styles.flag}/>  
@@ -51,7 +51,7 @@ const LogPhone = () => {
                 ref={textInputRef}
                 style={styles.textInput}
                 keyboardType="phone-pad"
-                placeholder='Phone Number'
+                placeholder={t("Phone.num")}
                 placeholderTextColor='#C2D4F2'
               />
               <View style={styles.underline} />
@@ -59,7 +59,7 @@ const LogPhone = () => {
           </View>
         </View>
         <View style={styles.bottom}>
-          <BlueButton buttonText={'Continue'} bottomPadding={36} onPress={() => navigation.navigate('LogCode')}/>
+          <BlueButton buttonText={t("Continue")} bottomPadding={36} onPress={() => navigation.navigate('LogCode')}/>
         </View>
       </View>
     </KeyboardAvoidingView>

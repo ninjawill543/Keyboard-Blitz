@@ -38,9 +38,9 @@ const Code = () => {
     >
       <View style={styles.main}>
         <View style={styles.top}>
-          <Text style={styles.title}>Enter OTP Code </Text>
-          <Text style={styles.littleText}>Enter the OTP code we sent via SMS to your registered phone number +330769232441</Text>
-          <Text style={styles.phoneText}>OTP *</Text>
+          <Text style={styles.title}>{t("Code.title")} </Text>
+          <Text style={styles.littleText}>{t("Code.desc")}</Text>
+          <Text style={styles.phoneText}>Code *</Text>
           <View style={styles.inputContainer}>
             <View style={styles.lineContainer}>
               <TextInput
@@ -55,7 +55,7 @@ const Code = () => {
           </View>
         </View>
         <View style={styles.bottom}>
-          <BlueButton buttonText={'Continue'} bottomPadding={36} onPress={() => navigation.navigate('Name')}/>
+          <BlueButton buttonText={t("Continue")} bottomPadding={36} onPress={() => navigation.navigate('Name')}/>
         </View>
       </View>
     </KeyboardAvoidingView>

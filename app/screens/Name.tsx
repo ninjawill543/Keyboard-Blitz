@@ -37,9 +37,9 @@ const Code = () => {
     >
       <View style={styles.main}>
         <View style={styles.top}>
-          <Text style={styles.title}>Chose a username </Text>
+          <Text style={styles.title}>{t("Name.title")} </Text>
           <Text style={styles.littleText}></Text>
-          <Text style={styles.phoneText}>Username *</Text>
+          <Text style={styles.phoneText}>{t("Name.user")} *</Text>
           <View style={styles.inputContainer}>
             <View style={styles.lineContainer}>
               <TextInput
@@ -53,7 +53,7 @@ const Code = () => {
           </View>
         </View>
         <View style={styles.bottom}>
-          <BlueButton buttonText={'Continue'} bottomPadding={36} onPress={() => navigation.navigate('Friends')}/>
+          <BlueButton buttonText={t("Continue")} bottomPadding={36} onPress={() => navigation.navigate('Friends')}/>
         </View>
       </View>
     </KeyboardAvoidingView>

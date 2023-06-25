@@ -65,7 +65,7 @@ const Friends = () => {
           <TouchableOpacity>
             <Image source={require('../assets/lh.png')} style={{width: 64, height: 64}} /> 
           </TouchableOpacity>
-          <Text style={styles.title}>Friends</Text>
+          <Text style={styles.title}>{t("Friends.friends")}</Text>
           <TouchableOpacity onPress={() => navigation.navigate('FriendSearch')}>
             <Image source={require('../assets/plus.png')} style={{width: 28, height: 28, marginLeft: 36}} /> 
           </TouchableOpacity>
