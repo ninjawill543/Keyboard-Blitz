@@ -1,6 +1,7 @@
 {
   "Welcome": {
-    "title": "Bienvenue à Keyboard Blitz",
+    "title": "Keyboard Blitz",
+    // "title": "Bienvenue à Keyboard Blitz",
     "desc": "Le jeu compétitif où vous vous battez avec vos amis",
     "log": "Connexion",
     "sign": "Créer un compte"

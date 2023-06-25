@@ -1,16 +1,5 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react-native'
-import React from 'react'
-import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStackParamList} from './RootStackParams';
-import {
-  useFonts,
-  Roboto_400Regular as Regular,
-  Roboto_500Medium as Medium,
-  Roboto_700Bold as Bold,
-} from '@expo-google-fonts/roboto';
-import "../locales/index";
-import { useTranslation } from "react-i18next";
+import {ColoredPlaceholderTextInput, ImageBackground, Keyboard, SafeAreaView, FlatList, TextInput, Platform, useRef,KeyboardAvoidingView, Regular, Medium, Bold, useFonts, StyleSheet,Text,View,Button, TouchableOpacity,Image, React, useState, useEffect, colors, BlueButton, WhiteButton, useTranslation, useNavigation, StackNavigationProp, RootStackParamList, AppLoading} from '../imports';
+
 
 type FriendsScreenProp = StackNavigationProp<RootStackParamList, 'Friends'>;
 
