@@ -16,6 +16,7 @@
     "@react-navigation/stack": "^6.3.17",
     "@types/i18next": "^13.0.0",
     "@types/react-i18next": "^8.1.0",
+    "axios": "^1.4.0",
     "expo": "~48.0.18",
     "expo-app-loading": "^2.1.1",
     "expo-font": "~11.1.1",
