@@ -20,25 +20,25 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
-  //   <NavigationContainer>
-  //     <Stack.Navigator 
-  //     screenOptions={{
-  //   headerShown: false
-  // }}
-  // >
-  //       <Stack.Screen name="Welcome" component={Welcome} />
-  //       <Stack.Screen name="Phone" component={Phone} />
-  //       <Stack.Screen name="LogPhone" component={LogPhone} />
-  //       <Stack.Screen name="Code" component={Code} />
-  //       <Stack.Screen name="LogCode" component={LogCode} />
-  //       <Stack.Screen name="Name" component={Name} />
-  //       <Stack.Screen name="Friends" component={Friends} />
-  //       <Stack.Screen name="FriendSearch" component={FriendSearch} />
-  //       <Stack.Screen name="Game" component={Game} />
-  //     </Stack.Navigator>
-  //   </NavigationContainer>
+    <NavigationContainer>
+      <Stack.Navigator 
+      screenOptions={{
+    headerShown: false
+  }}
+  >
+        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="Phone" component={Phone} />
+        <Stack.Screen name="LogPhone" component={LogPhone} />
+        <Stack.Screen name="Code" component={Code} />
+        <Stack.Screen name="LogCode" component={LogCode} />
+        <Stack.Screen name="Name" component={Name} />
+        <Stack.Screen name="Friends" component={Friends} />
+        <Stack.Screen name="FriendSearch" component={FriendSearch} />
+        <Stack.Screen name="Game" component={Game} />
+      </Stack.Navigator>
+    </NavigationContainer>
     // <PhoneAuth />
-    <RootNavigation />
+    // <RootNavigation />
   );
 }
 
