@@ -19,6 +19,7 @@ import Game from './screens/Game';
 const Stack = createStackNavigator<RootStackParamList>();
 
 
+
 export default function App() {
 
   return (
@@ -39,6 +40,7 @@ export default function App() {
         <Stack.Screen name="Game" component={Game} />
       </Stack.Navigator>
     </NavigationContainer>
+  
 
   );
 }
