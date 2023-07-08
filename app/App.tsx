@@ -1,55 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity, TextInput, Button } from 'react-native';
-import 'react-native-gesture-handler';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import {RootStackParamList} from './screens/RootStackParams';
-import Phone from './screens/Phone';
-import LogPhone from './screens/LogPhone';
-import Welcome from './screens/Welcome';
-import Code from './screens/Code';
-import LogCode from './screens/LogCode';
-import Name from './screens/Name';
-import Friends from './screens/Friends';
-import FriendSearch from './screens/FriendSearch';
-import Game from './screens/Game';
+import { StyleSheet, Text, View } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import Login from './testfiles/Login'
+import List from './testfiles/List'
+import { User, onAuthStateChanged } from 'firebase/auth'
+import { FIREBASE_AUTH } from './config/firebase'
+
+const Stack = createNativeStackNavigator();
 
 
+const LoggedStack = createNativeStackNavigator();
 
-const Stack = createStackNavigator<RootStackParamList>();
+function LoggedLayout(){
+  return(
+    <LoggedStack.Navigator>
+      <LoggedStack.Screen name='List' component={List} options={{headerShown:false}}/>
+    </LoggedStack.Navigator>
+  )
+}
+const App = () => {
+  const [user, setUser] = useState< User | null >(null);
+  useEffect(() => {
+    onAuthStateChanged(FIREBASE_AUTH, (user) => {
+      console.log(user);
+      setUser(user);
+    });
+  }, []);
 
-
-
-export default function App() {
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator 
-      screenOptions={{
-    headerShown: false
-  }}
-  >
-        <Stack.Screen name="Welcome" component={Welcome} />
-        <Stack.Screen name="Phone" component={Phone} />
-        <Stack.Screen name="LogPhone" component={LogPhone} />
-        <Stack.Screen name="Code" component={Code} />
-        <Stack.Screen name="LogCode" component={LogCode} />
-        <Stack.Screen name="Name" component={Name} />
-        <Stack.Screen name="Friends" component={Friends} />
-        <Stack.Screen name="FriendSearch" component={FriendSearch} />
-        <Stack.Screen name="Game" component={Game} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  
-
-  );
+  <NavigationContainer>
+    <Stack.Navigator initialRouteName='Login'>
+      {user ? (      <Stack.Screen name='LoggedLayout' component={LoggedLayout} options={{headerShown:false}}/>
+) : (      <Stack.Screen name='Login' component={Login} options={{headerShown:false}}/>
+)}
+    </Stack.Navigator>
+  </NavigationContainer>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App
+
+const styles = StyleSheet.create({})
