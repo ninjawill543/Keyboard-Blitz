@@ -2,7 +2,7 @@ export type RootStackParamList = {
     Welcome: undefined;
     Phone: undefined;
     LogPhone: undefined;
-    LogCode: undefined;
+    LogCode: { verificationId: string };
     Code: undefined;
     Name: undefined;
     Friends: undefined;

@@ -41,16 +41,18 @@ import {
   FirebaseRecaptchaVerifierModal,
   FirebaseRecaptchaBanner,
 } from "expo-firebase-recaptcha";
+import { RouteProp } from '@react-navigation/native';
 
-type LogCodeScreenProp = StackNavigationProp<RootStackParamList, "LogCode">;
 
-const LogCode = () => {
+type LogCodeScreenProp = StackNavigationProp<RootStackParamList, 'LogCode'>;
+
+const LogCode = ({ route }: { route: RouteProp<RootStackParamList, 'LogCode'> }) => {  
+  const { verificationId } = route.params;
   const app = FIREBASE_APP;
   const auth = FIREBASE_AUTH;
   const recaptchaVerifier = useRef(null);
 
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [verificationId, setVerificationID] = useState("");
+  // const [verificationId, setVerificationID] = useState("");
   const [verificationCode, setVerificationCode] = useState("");
 
   const firebaseConfig = app ? app.options : undefined;
@@ -71,7 +73,7 @@ const LogCode = () => {
       setInfo("Success: Phone authentication successful"); // if OK, set the message
       navigation.navigate("Friends"); // navigate to the welcome screen
     } catch (error) {
-      setInfo(`Error : ${error.message}`); // show the error.
+      alert(error.message);
     }
   };
 
@@ -119,7 +121,6 @@ const LogCode = () => {
                   </View>
                 </View>
               </View>
-              {info && <Text>{info}</Text>}
               <View style={styles.bottom}>
                 <BlueButton
                   buttonText={t("Continue")}

@@ -3,6 +3,8 @@ import { ActivityIndicator} from 'react-native'
 import { FIREBASE_APP, FIREBASE_AUTH } from '../config/firebase';
 import {getAuth,PhoneAuthProvider,signInWithCredential} from 'firebase/auth';
 import {FirebaseRecaptchaVerifierModal,FirebaseRecaptchaBanner} from 'expo-firebase-recaptcha';
+import { RouteProp } from '@react-navigation/native';
+
 
 type LogPhoneScreenProp = StackNavigationProp<RootStackParamList, 'LogPhone'>;
 
@@ -89,7 +91,7 @@ const LogPhone = () => {
                 </View>
               </View>
               <View style={styles.bottom}>
-                <BlueButton buttonText={t("Continue")} bottomPadding={36} onPress={ () => {handleSendVerificationCode() ; navigation.navigate('LogCode')}} disabled={!phoneNumber}/>
+                <BlueButton buttonText={t("Continue")} bottomPadding={36} onPress={ () => {handleSendVerificationCode() ; navigation.navigate('LogCode', { verificationId: verificationId });}} disabled={!phoneNumber}/>
               </View>
             </View>
                 
