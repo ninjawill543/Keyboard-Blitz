@@ -8,7 +8,7 @@ import {
   Roboto_700Bold as Bold,
 } from '@expo-google-fonts/roboto';
 
-const BlueButton = ({ buttonText, bottomPadding, onPress }) => {
+const BlueButton = ({ buttonText, bottomPadding, onPress, disabled }) => {
   const buttonStyle = {
     ...styles.mainButton,
     marginBottom: bottomPadding,
@@ -20,7 +20,7 @@ const BlueButton = ({ buttonText, bottomPadding, onPress }) => {
       Medium,
       Bold
     }),
-    <TouchableOpacity style={buttonStyle} onPress={onPress}>
+    <TouchableOpacity style={buttonStyle} onPress={onPress} disabled={disabled}>
       <Text style={styles.buttonText}>{buttonText}</Text>
     </TouchableOpacity>
   );

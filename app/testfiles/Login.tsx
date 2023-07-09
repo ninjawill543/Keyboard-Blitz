@@ -118,11 +118,12 @@ const handleVerifyVerificationCode = async () => {
                             disabled={!phoneNumber}
                         />
                 </View>
+                
             )
             
         }
 
-        { // if verification id exists show the confirm code input field.
+        {/* { // if verification id exists show the confirm code input field.
             verificationId && (
                 <View>
                     <Text style={styles.text}>Enter the verification code</Text>
@@ -140,7 +141,7 @@ const handleVerifyVerificationCode = async () => {
                     />
                 </View>
             )
-        }
+        } */}
 
         {attemptInvisibleVerification && <FirebaseRecaptchaBanner/>}
     </View>
