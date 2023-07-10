@@ -12,7 +12,7 @@
     },
     "Code": {
       "title": "Enter OTP Code",
-      "desc": "Enter the OTP code we sent via SMS to your registered phone number +33769232441"
+      "desc": "Enter the OTP code we sent via SMS to your registered phone number"
     },
     "Name": {
       "title": "Chose a username",

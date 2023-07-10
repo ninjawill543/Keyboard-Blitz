@@ -94,37 +94,37 @@ const handleVerifyVerificationCode = async () => {
             firebaseConfig={firebaseConfig}
         />
 
-        {
+        {/* {
             info && <Text style={styles.text}>{info}</Text>
-        }
+        } */}
 
         { // show the phone number input field when verification id is not set.
-        //     !verificationId && (
-        //         <View>
-        //             <Text style={styles.text}>Enter the phone number</Text>
+            !verificationId && (
+                <View>
+                    <Text style={styles.text}>Enter the phone number</Text>
 
-        //                 <TextInput
-        //                     placeholder='+2547000000'
-        //                     autoFocus
-        //                     autoCompleteType='tel'
-        //                     keyboardType='phone-pad'
-        //                     textContentType='telephoneNumber'
-        //                     onChangeText={ (phoneNumber) => setPhoneNumber(phoneNumber)}
-        //                 />
+                        <TextInput
+                            placeholder='+2547000000'
+                            autoFocus
+                            autoCompleteType='tel'
+                            keyboardType='phone-pad'
+                            textContentType='telephoneNumber'
+                            onChangeText={ (phoneNumber) => setPhoneNumber(phoneNumber)}
+                        />
 
-        //                 <Button 
-        //                     onPress={ () => handleSendVerificationCode()}
-        //                     title= "Send Verification Code"
-        //                     disabled={!phoneNumber}
-        //                 />
-        //         </View>
+                        <Button 
+                            onPress={ () => handleSendVerificationCode()}
+                            title= "Send Verification Code"
+                            disabled={!phoneNumber}
+                        />
+                </View>
                 
-        //     )
+            )
             
-        // }
+        }
 
-        // { // if verification id exists show the confirm code input field.
-        //     verificationId && (
+        { // if verification id exists show the confirm code input field.
+            verificationId && (
                 <View>
                     <Text style={styles.text}>Enter the verification code</Text>
 
@@ -140,7 +140,7 @@ const handleVerifyVerificationCode = async () => {
                         onPress = {() => handleVerifyVerificationCode()}
                     />
                 </View>
-        //     )
+            )
         }
 
         {attemptInvisibleVerification && <FirebaseRecaptchaBanner/>}
