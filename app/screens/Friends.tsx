@@ -1,4 +1,5 @@
 import {ColoredPlaceholderTextInput, ImageBackground, Keyboard, SafeAreaView, FlatList, TextInput, Platform, useRef,KeyboardAvoidingView, Regular, Medium, Bold, useFonts, StyleSheet,Text,View,Button, TouchableOpacity,Image, React, useState, useEffect, colors, BlueButton, WhiteButton, useTranslation, useNavigation, StackNavigationProp, RootStackParamList, AppLoading} from '../imports';
+import { FIREBASE_AUTH } from '../config/firebase'
 
 
 type FriendsScreenProp = StackNavigationProp<RootStackParamList, 'Friends'>;
@@ -51,7 +52,7 @@ const Friends = () => {
     <View style={styles.container}>
       <View style={styles.main}>
         <View style={styles.topMenu}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => FIREBASE_AUTH.signOut()}>
             <Image source={require('../assets/lh.png')} style={{width: 64, height: 64}} /> 
           </TouchableOpacity>
           <Text style={styles.title}>{t("Friends.friends")}</Text>

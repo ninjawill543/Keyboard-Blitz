@@ -8,9 +8,7 @@ import { User, onAuthStateChanged } from 'firebase/auth'
 import { FIREBASE_AUTH } from './config/firebase'
 import Welcome from './screens/Welcome'
 import LogPhone from './screens/LogPhone'
-import LogCode from './screens/LogCode'
 import Phone from './screens/Phone'
-import Code from './screens/Code'
 import Name from './screens/Name'
 import Friends from './screens/Friends'
 import FriendSearch from './screens/FriendSearch'
@@ -35,9 +33,7 @@ function LoggedOut(){
     <LoggedStack.Navigator>
       <LoggedStack.Screen name='Welcome' component={Welcome} options={{headerShown:false}}/>
       <LoggedStack.Screen name='LogPhone' component={LogPhone} options={{headerShown:false}}/>
-      <LoggedStack.Screen name='LogCode' component={LogCode} options={{headerShown:false}}/>
       <LoggedStack.Screen name='Phone' component={Phone} options={{headerShown:false}}/>
-      <LoggedStack.Screen name='Code' component={Code} options={{headerShown:false}}/>
       <LoggedStack.Screen name='Name' component={Name} options={{headerShown:false}}/>
     </LoggedStack.Navigator>
   )
