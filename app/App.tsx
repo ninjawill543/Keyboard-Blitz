@@ -11,6 +11,12 @@ import Name from './screens/Name'
 import Friends from './screens/Friends'
 import FriendSearch from './screens/FriendSearch'
 import Game from './screens/Game'
+import EStyleSheet from 'react-native-extended-stylesheet';
+
+
+EStyleSheet.build({ // always call EStyleSheet.build() even if you don't use global variables!
+  $textColor: '#0275d8'
+});
 
 const Stack = createNativeStackNavigator();
 
@@ -48,11 +54,17 @@ const App = () => {
 
   return (
   <NavigationContainer>
-    <Stack.Navigator initialRouteName='Login'>
+    {/* <Stack.Navigator initialRouteName='Login'>
       {user ? (      <Stack.Screen name='LoggedLayout' component={LoggedIn} options={{headerShown:false}}/>
 ) : (      <Stack.Screen name='LoggedOut' component={LoggedOut} options={{headerShown:false}}/>
 )}
-    </Stack.Navigator>
+    </Stack.Navigator> */}
+    <Welcome />
+    {/* <LogPhone /> */}
+    {/* <Friends /> */}
+    {/* <Name /> */}
+    {/* <FriendSearch /> */}
+    {/* <Game /> */}
   </NavigationContainer>
   )
 }

@@ -1,6 +1,7 @@
 import {Regular, Medium, Bold, useFonts, StyleSheet,Text,View,Button, TouchableOpacity,Image, React, useState, useEffect, colors, BlueButton, WhiteButton, useTranslation, useNavigation, StackNavigationProp, RootStackParamList, AppLoading} from '../imports';
-
+import EStyleSheet from 'react-native-extended-stylesheet';
 type WelcomeScreenProp = StackNavigationProp<RootStackParamList, 'Welcome'>;
+
 
 
 const Welcome = () => {
@@ -75,7 +76,7 @@ const Welcome = () => {
 
 export default Welcome;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
@@ -102,8 +103,11 @@ const styles = StyleSheet.create({
     marginBottom: "7.8%",
   },
   image: {
-    width: 362,
-    height: 291.77,
+    // width: 362,
+    width: '22rem',
+    // aspectRatio: 10/8,
+    // height: 291.77,
+    height: '18rem',
     alignSelf: "flex-start",
     marginBottom: "17.48%",
   },
