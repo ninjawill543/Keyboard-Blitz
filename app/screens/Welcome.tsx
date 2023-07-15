@@ -1,7 +1,7 @@
 import {Regular, Medium, Bold, useFonts, StyleSheet,Text,View,Button, TouchableOpacity,Image, React, useState, useEffect, colors, BlueButton, WhiteButton, useTranslation, useNavigation, StackNavigationProp, RootStackParamList, AppLoading} from '../imports';
 import EStyleSheet from 'react-native-extended-stylesheet';
 type WelcomeScreenProp = StackNavigationProp<RootStackParamList, 'Welcome'>;
-
+import Pro from '../media.json'
 
 
 const Welcome = () => {
@@ -119,6 +119,9 @@ const styles = EStyleSheet.create({
     borderWidth: 1,
     borderColor: colors.two,
     marginBottom: "20%",
+    '@media ios and (width: 393) and (height: 852)': {
+      marginBottom: '10%',
+    },
     marginLeft: "66%",
     width: 131,
     height: 41,

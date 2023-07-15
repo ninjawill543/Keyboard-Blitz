@@ -1,4 +1,5 @@
 import {ColoredPlaceholderTextInput, ImageBackground, Keyboard, SafeAreaView, FlatList, TextInput, Platform, useRef,KeyboardAvoidingView, Regular, Medium, Bold, useFonts, StyleSheet,Text,View,Button, TouchableOpacity,Image, React, useState, useEffect, colors, BlueButton, WhiteButton, useTranslation, useNavigation, StackNavigationProp, RootStackParamList, AppLoading} from '../imports';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 type GameScreenProp = StackNavigationProp<RootStackParamList, 'Game'>;
 
@@ -69,7 +70,7 @@ const Game = () => {
 
 export default Game;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',

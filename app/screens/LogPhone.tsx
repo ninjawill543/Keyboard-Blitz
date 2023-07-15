@@ -5,6 +5,7 @@ import {getAuth,PhoneAuthProvider,signInWithCredential} from 'firebase/auth';
 import {FirebaseRecaptchaVerifierModal,FirebaseRecaptchaBanner} from 'expo-firebase-recaptcha';
 import { RouteProp } from '@react-navigation/native';
 import { Alert } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 type LogPhoneScreenProp = StackNavigationProp<RootStackParamList, 'LogPhone'>;
 
@@ -153,7 +154,7 @@ const handleVerifyVerificationCode = async () => {
 
 export default SignInScreen;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
     container: {
       flex: 1,
       alignItems: 'center',
@@ -161,6 +162,9 @@ const styles = StyleSheet.create({
     },
     main: {
       width: '90%',
+      '@media ios and (width: 393) and (height: 852)': {
+        width: '88%'
+      },
       height: '100%',
       flexDirection: 'column',
       justifyContent: 'space-between',
@@ -244,6 +248,9 @@ const styles = StyleSheet.create({
     },
     main1: {
       width: "90%",
+      '@media ios and (width: 393) and (height: 852)': {
+        width: '92%'
+      },
       height: "100%",
       flexDirection: "column",
       justifyContent: "space-between",

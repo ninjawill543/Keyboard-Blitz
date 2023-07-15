@@ -1,5 +1,6 @@
 import {ColoredPlaceholderTextInput, ImageBackground, Keyboard, SafeAreaView, FlatList, TextInput, Platform, useRef,KeyboardAvoidingView, Regular, Medium, Bold, useFonts, StyleSheet,Text,View,Button, TouchableOpacity,Image, React, useState, useEffect, colors, BlueButton, WhiteButton, useTranslation, useNavigation, StackNavigationProp, RootStackParamList, AppLoading} from '../imports';
 import { FIREBASE_AUTH } from '../config/firebase'
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 
 type FriendsScreenProp = StackNavigationProp<RootStackParamList, 'Friends'>;
@@ -74,7 +75,7 @@ const Friends = () => {
 
 export default Friends
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
@@ -107,6 +108,9 @@ const styles = StyleSheet.create({
   card:{
     // flex: 1,
     marginHorizontal: 30,
+    '@media ios and (width: 393) and (height: 852)': {
+      marginHorizontal: 20,
+    },
     marginBottom: 50,
     height: 188,
     // backgroundColor: 'yellow',

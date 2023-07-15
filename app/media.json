@@ -1,0 +1,11 @@
+{
+    "14Pro":"@media ios and (width: 393) and (height: 852)",
+    "12mini&13mini":"@media ios and (width: 375) and (height: 812)",
+    "12promax&13promax&14plus":"@media ios and (width: 428) and (height: 926)",
+    "12&13&14&12pro&13pro":"@media ios and (width: 390) and (height: 844)",
+    "xr&11":"@media ios and (width: 414) and (height: 896)",
+    "xsmax&11promax": "@media ios and (width: 414) and (height: 896)",
+    "x&xs&11pro":"@media ios and (width: 375) and (height: 812)",
+    "6plus&6splus&7plus&8plus":"@media ios and (width: 414) and (height: 736)",
+    "6&6s&7&8&se2&se3":"@media ios and (width: 375) and (height: 667)"
+}

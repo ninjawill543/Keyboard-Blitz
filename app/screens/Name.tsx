@@ -1,4 +1,5 @@
 import {ColoredPlaceholderTextInput, ImageBackground, Keyboard, SafeAreaView, FlatList, TextInput, Platform, useRef,KeyboardAvoidingView, Regular, Medium, Bold, useFonts, StyleSheet,Text,View,Button, TouchableOpacity,Image, React, useState, useEffect, colors, BlueButton, WhiteButton, useTranslation, useNavigation, StackNavigationProp, RootStackParamList, AppLoading} from '../imports';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 type NameScreenProp = StackNavigationProp<RootStackParamList, 'Name'>;
 
@@ -49,7 +50,7 @@ const Code = () => {
 
 export default Code;
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
@@ -57,6 +58,9 @@ const styles = StyleSheet.create({
   },
   main: {
     width: '90%',
+    '@media ios and (width: 393) and (height: 852)': {
+      width: '93%'
+    },
     height: '100%',
     flexDirection: 'column',
     justifyContent: 'space-between',

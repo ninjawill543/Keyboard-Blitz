@@ -1,4 +1,5 @@
 import {ColoredPlaceholderTextInput, ImageBackground, Keyboard, SafeAreaView, FlatList, TextInput, Platform, useRef,KeyboardAvoidingView, Regular, Medium, Bold, useFonts, StyleSheet,Text,View,Button, TouchableOpacity,Image, React, useState, useEffect, colors, BlueButton, WhiteButton, useTranslation, useNavigation, StackNavigationProp, RootStackParamList, AppLoading} from '../imports';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 
 type FriendSearchScreenProp = StackNavigationProp<RootStackParamList, 'FriendSearch'>;
@@ -81,8 +82,8 @@ const Email = () => {
 
 export default Email
 
-const styles = StyleSheet.create({
-    container: {
+const styles = EStyleSheet.create({
+  container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -117,6 +118,9 @@ const styles = StyleSheet.create({
     },
     cancel:{
       marginRight: '2%',
+      '@media ios and (width: 393) and (height: 852)': {
+        marginRight: '-2%'
+      },
       fontSize: 18,
       fontFamily: 'Regular',
     },
