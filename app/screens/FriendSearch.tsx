@@ -121,6 +121,9 @@ const styles = EStyleSheet.create({
       '@media ios and (width: 393) and (height: 852)': {
         marginRight: '-2%'
       },
+      '@media ios and (width: 375) and (height: 812)': {
+        marginRight: '-2%'
+      },
       fontSize: 18,
       fontFamily: 'Regular',
     },
