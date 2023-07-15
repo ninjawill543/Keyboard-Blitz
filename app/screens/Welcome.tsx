@@ -49,7 +49,7 @@ const Welcome = () => {
                   source={require("../assets/language.png")}
                   style={styles.languageSign}
                 />
-                <Text style={styles.languageText}>French</Text>
+                <Text style={styles.languageText}>Français</Text>
               </TouchableOpacity>
             )}
           </View>
@@ -105,6 +105,10 @@ const styles = EStyleSheet.create({
   image: {
     // width: 362,
     width: '22rem',
+    '@media ios and (width: 375) and (height: 812)': {
+      width: '20rem',
+      height: '16.5rem'
+    },
     // aspectRatio: 10/8,
     // height: 291.77,
     height: '18rem',
@@ -120,6 +124,9 @@ const styles = EStyleSheet.create({
     borderColor: colors.two,
     marginBottom: "20%",
     '@media ios and (width: 393) and (height: 852)': {
+      marginBottom: '10%',
+    },
+    '@media ios and (width: 375) and (height: 812)': {
       marginBottom: '10%',
     },
     marginLeft: "66%",

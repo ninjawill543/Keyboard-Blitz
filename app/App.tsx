@@ -59,12 +59,12 @@ const App = () => {
 ) : (      <Stack.Screen name='LoggedOut' component={LoggedOut} options={{headerShown:false}}/>
 )}
     </Stack.Navigator> */}
-    {/* <Welcome /> */}
+    <Welcome />
     {/* <LogPhone /> */}
     {/* <Name /> */}
     {/* <Friends /> */}
     {/* <FriendSearch /> */}
-    <Game />
+    {/* <Game /> */}
   </NavigationContainer>
   )
 }
