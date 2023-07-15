@@ -115,6 +115,11 @@ const styles = EStyleSheet.create({
       marginHorizontal: 15,
       marginBottom: 30,
     },
+    "@media ios and (width: 390) and (height: 844)": {
+      marginHorizontal: 18,
+      marginBottom: 30
+
+    },
     marginBottom: 50,
     height: 188,
     // backgroundColor: 'yellow',

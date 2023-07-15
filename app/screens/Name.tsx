@@ -61,6 +61,9 @@ const styles = EStyleSheet.create({
     '@media ios and (width: 393) and (height: 852)': {
       width: '93%'
     },
+    "@media ios and (width: 390) and (height: 844)": {
+      width: '93%'
+    },
     height: '100%',
     flexDirection: 'column',
     justifyContent: 'space-between',
